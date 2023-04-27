@@ -1,5 +1,8 @@
 package protection.model.dataobjects.measurements;
 
+import lombok.Data;
+
+@Data
 public class Vector {
 
     private AnalogValue mag = new AnalogValue();
@@ -28,45 +31,5 @@ public class Vector {
 
         ang.getF().setValue(voltage.getAng().getF().getValue() - current.getAng().getF().getValue());
         mag.getF().setValue(voltage.getMag().getF().getValue()/current.getMag().getF().getValue());
-    }
-
-    public AnalogValue getMag() {
-        return mag;
-    }
-
-    public void setMag(AnalogValue mag) {
-        this.mag = mag;
-    }
-
-    public AnalogValue getAng() {
-        return ang;
-    }
-
-    public void setAng(AnalogValue ang) {
-        this.ang = ang;
-    }
-
-    public AnalogValue getRad() {
-        return rad;
-    }
-
-    public void setRad(AnalogValue rad) {
-        this.rad = rad;
-    }
-
-    public AnalogValue getX() {
-        return x;
-    }
-
-    public void setX(AnalogValue x) {
-        this.x = x;
-    }
-
-    public AnalogValue getY() {
-        return y;
-    }
-
-    public void setY(AnalogValue y) {
-        this.y = y;
     }
 }

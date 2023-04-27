@@ -1,7 +1,7 @@
 package breakerControl.nodes.input;
 
 import protection.model.common.LN;
-import breakerControl.objects.samples.SAV;
+import breakerControl.objects.samples.MV;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -14,7 +14,7 @@ import java.util.List;
 
 public class LSVC extends LN {
 
-    private List<SAV> signals = new ArrayList<>();
+    private List<MV> signals = new ArrayList<>();
 
     /** Считанный файл CFG */
     private List<String> cfgFileLines = new ArrayList<>();
@@ -42,7 +42,7 @@ public class LSVC extends LN {
 
         if(signals.size() < signalNumber) {
             for (int i = 0; i < 100; i++) {
-                signals.add(new SAV());
+                signals.add(new MV());
             }
         }
 
@@ -70,7 +70,7 @@ public class LSVC extends LN {
                 float value = Float.parseFloat(split[s + 2]);
                 if(s < aBuffer.size()) value = value * aBuffer.get(s) + bBuffer.get(s);
 
-                SAV sav = signals.get(s);
+                MV sav = signals.get(s);
                 sav.getInstMag().getF().setValue(value * 1000);
 
             }
@@ -84,7 +84,7 @@ public class LSVC extends LN {
 
         try {
             File file = new File(path);
-            if(!file.exists()) System.err.println(path + " - Файл не найден, неправильно указан путь");
+            if(!file.exists()) System.err.println(path + " - Файл не найден");
 
             FileReader fileReader = new FileReader(file);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
@@ -106,7 +106,7 @@ public class LSVC extends LN {
         return iterator.hasNext();
     }
 
-    public List<SAV> getSignals() {
+    public List<MV> getSignals() {
         return signals;
     }
 }

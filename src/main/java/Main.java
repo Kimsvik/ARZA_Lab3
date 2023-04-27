@@ -67,16 +67,16 @@ public class Main {
                 new NHMISignal("TestSignal3", lcom.OUT.get(2).getInstMag().getF())
         );
         nhmi.addSignals(
-                new NHMISignal("TestSignal 1RMS", mmxu.getA().getPhsA().getcVal().getMag().getF()),
+                new NHMISignal("TestSignal 1RMS", mmxu.getA().getPhsA().getCVal().getMag().getF()),
                 new NHMISignal("Ustavka1St", ptoc.getStrVal().getSetMag().getF()),
                 new NHMISignal("Ustavka2St", ptoc2.getStrVal().getSetMag().getF()));
         nhmi.addSignals(
-                new NHMISignal("TestSignal 2RMS", mmxu.getA().getPhsB().getcVal().getMag().getF()),
+                new NHMISignal("TestSignal 2RMS", mmxu.getA().getPhsB().getCVal().getMag().getF()),
                 new NHMISignal("Ustavka1St", ptoc.getStrVal().getSetMag().getF()),
                 new NHMISignal("Ustavka2St", ptoc2.getStrVal().getSetMag().getF())
         );
         nhmi.addSignals(
-                new NHMISignal("TestSignal 3RMS", mmxu.getA().getPhsC().getcVal().getMag().getF()),
+                new NHMISignal("TestSignal 3RMS", mmxu.getA().getPhsC().getCVal().getMag().getF()),
                 new NHMISignal("Ustavka1St", ptoc.getStrVal().getSetMag().getF()),
                 new NHMISignal("Ustavka2St", ptoc2.getStrVal().getSetMag().getF())
         );

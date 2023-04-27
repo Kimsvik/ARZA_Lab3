@@ -1,11 +1,10 @@
-package protection.model.dataobjects.protection;
+package breakerControl.objects.samples;
 
 import lombok.Getter;
 import lombok.Setter;
 import protection.model.dataobjects.measurements.AnalogValue;
 
-public class ASG {
+public class MV {
     @Getter @Setter
-    private AnalogValue SetMag = new AnalogValue();
-
+    private AnalogValue instMag = new AnalogValue();
 }

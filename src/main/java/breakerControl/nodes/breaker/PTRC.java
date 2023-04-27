@@ -1,5 +1,7 @@
 package breakerControl.nodes.breaker;
 
+import lombok.Getter;
+import lombok.Setter;
 import protection.model.common.LN;
 import protection.model.dataobjects.protection.ACT;
 
@@ -7,7 +9,10 @@ import java.util.ArrayList;
 
 public class PTRC extends LN {
 
+    @Getter @Setter
     private ACT Tr = new ACT();
+
+    @Getter @Setter
     private ArrayList<ACT> Op = new ArrayList<ACT>();
 
 
@@ -21,23 +26,6 @@ public class PTRC extends LN {
 
         }
 
-    }
-
-
-    public ACT getTr() {
-        return Tr;
-    }
-
-    public void setTr(ACT tr) {
-        Tr = tr;
-    }
-
-    public ArrayList<ACT> getOp() {
-        return Op;
-    }
-
-    public void setOp(ArrayList<ACT> op) {
-        Op = op;
     }
 }
 

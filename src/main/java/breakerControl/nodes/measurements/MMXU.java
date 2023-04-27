@@ -1,23 +1,23 @@
 package breakerControl.nodes.measurements;
 
+import lombok.Data;
 import protection.model.common.LN;
 import protection.model.dataobjects.measurements.Vector;
 import breakerControl.objects.measurements.filter.Filter;
 import breakerControl.objects.measurements.filter.Furier;
 import protection.model.dataobjects.measurements.WYE;
-import breakerControl.objects.samples.SAV;
+import breakerControl.objects.samples.MV;
 
-
+@Data
 public class MMXU extends LN {
 
-    private SAV instIa = new SAV();
-    private SAV instIb = new SAV();
-    private SAV instIc = new SAV();
+    private MV instIa = new MV();
+    private MV instIb = new MV();
+    private MV instIc = new MV();
 
-    private SAV instUa = new SAV();
-    private SAV instUb = new SAV();
-    private SAV instUc = new SAV();
-
+    private MV instUa = new MV();
+    private MV instUb = new MV();
+    private MV instUc = new MV();
 
     private WYE A = new WYE();
     private WYE PhV = new WYE();
@@ -40,174 +40,25 @@ public class MMXU extends LN {
     @Override
     public void process() {
 
-        UaF.process(instUa, PhV.getPhsA().getcVal());
-        UbF.process(instUb, PhV.getPhsB().getcVal());
-        UcF.process(instUc, PhV.getPhsC().getcVal());
-        iaF.process(instIa, A.getPhsA().getcVal());
-        ibF.process(instIb, A.getPhsB().getcVal());
-        icF.process(instIc, A.getPhsC().getcVal());
+        UaF.process(instUa, PhV.getPhsA().getCVal());
+        UbF.process(instUb, PhV.getPhsB().getCVal());
+        UcF.process(instUc, PhV.getPhsC().getCVal());
+        iaF.process(instIa, A.getPhsA().getCVal());
+        ibF.process(instIb, A.getPhsB().getCVal());
+        icF.process(instIc, A.getPhsC().getCVal());
 
 
 
 
-        Na.Napravlenie(A.getPhsA().getcVal(), PhV.getPhsA().getcVal());
-        Nb.Napravlenie(A.getPhsB().getcVal(), PhV.getPhsB().getcVal());
-        Nc.Napravlenie(A.getPhsC().getcVal(), PhV.getPhsC().getcVal());
+        Na.Napravlenie(A.getPhsA().getCVal(), PhV.getPhsA().getCVal());
+        Nb.Napravlenie(A.getPhsB().getCVal(), PhV.getPhsB().getCVal());
+        Nc.Napravlenie(A.getPhsC().getCVal(), PhV.getPhsC().getCVal());
 
-        N.getPhsA().setcVal(Na);
-        N.getPhsB().setcVal(Nb);
-        N.getPhsC().setcVal(Nc);
+        N.getPhsA().setCVal(Na);
+        N.getPhsB().setCVal(Nb);
+        N.getPhsC().setCVal(Nc);
 
 
     }
 
-    public WYE getN() {
-        return N;
-    }
-
-    public void setN(WYE n) {
-        N = n;
-    }
-
-    public Vector getNa() {
-        return Na;
-    }
-
-    public void setNa(Vector na) {
-        Na = na;
-    }
-
-    public Vector getNb() {
-        return Nb;
-    }
-
-    public void setNb(Vector nb) {
-        Nb = nb;
-    }
-
-    public Vector getNc() {
-        return Nc;
-    }
-
-    public void setNc(Vector nc) {
-        Nc = nc;
-    }
-
-    public Filter getUaF() {
-        return UaF;
-    }
-
-    public void setUaF(Filter uaF) {
-        UaF = uaF;
-    }
-
-    public Filter getUbF() {
-        return UbF;
-    }
-
-    public void setUbF(Filter ubF) {
-        UbF = ubF;
-    }
-
-    public Filter getUcF() {
-        return UcF;
-    }
-
-    public void setUcF(Filter ucF) {
-        UcF = ucF;
-    }
-
-    public SAV getInstIa() {
-        return instIa;
-    }
-
-    public SAV getInstIb() {
-        return instIb;
-    }
-
-    public SAV getInstIc() {
-        return instIc;
-    }
-
-    public SAV getInstUa() {
-        return instUa;
-    }
-
-    public SAV getInstUb() {
-        return instUb;
-    }
-
-    public SAV getInstUc() {
-        return instUc;
-    }
-
-    public Filter getIaF() {
-        return iaF;
-    }
-
-    public Filter getIbF() {
-        return ibF;
-    }
-
-    public Filter getIcF() {
-        return icF;
-    }
-
-    public void setInstIa(SAV instIa) {this.instIa = instIa;    }
-
-    public void setInstIb(SAV instIb) {
-        this.instIb = instIb;
-    }
-
-    public void setInstIc(SAV instIc) {
-        this.instIc = instIc;
-    }
-
-    public void setInstUa(SAV instUa) {
-        this.instUa = instUa;
-    }
-
-    public void setInstUb(SAV instUb) {
-        this.instUb = instUb;
-    }
-
-    public void setInstUc(SAV instUc) {
-        this.instUc = instUc;
-    }
-
-    public void setA(WYE a) {
-        A = a;
-    }
-
-    public WYE getPhV() {
-        return PhV;
-    }
-
-    public void setPhV(WYE phV) {
-        PhV = phV;
-    }
-
-    public WYE getW() {
-        return W;
-    }
-
-    public void setW(WYE w) {
-        W = w;
-    }
-
-    public void setIaF(Filter iaF) {
-        this.iaF = iaF;
-    }
-
-    public void setIbF(Filter ibF) {
-        this.ibF = ibF;
-    }
-
-    public void setIcF(Filter icF) {
-        this.icF = icF;
-    }
-
-    public WYE getA() {
-        return A;
-    }
 }

@@ -1,7 +1,7 @@
 package breakerControl.objects.measurements.filter;
 
 import protection.model.dataobjects.measurements.Vector;
-import breakerControl.objects.samples.SAV;
+import breakerControl.objects.samples.MV;
 
 
 public class Furier extends Filter {
@@ -13,7 +13,7 @@ public class Furier extends Filter {
     private final float[] bufx = new float[80];
     private final float[] bufy = new float[80];
     @Override
-    public void process(SAV sav, Vector vector){
+    public void process(MV sav, Vector vector){
         x += k*sav.getInstMag().getF().getValue() *Math.sin((2*Math.PI *50)*(0.02/size)*count)-bufx[count];
         y += k*sav.getInstMag().getF().getValue() *Math.sin((2*Math.PI *50)*(0.02/size)*count)-bufy[count];
         bufx[count] = (float) (k*sav.getInstMag().getF().getValue() * Math.sin((2*Math.PI *50)*(0.02/size)*count));

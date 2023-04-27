@@ -1,14 +1,13 @@
 package breakerControl.nodes.protection;
 
+import lombok.Data;
 import protection.model.common.LN;
 import protection.model.dataobjects.measurements.WYE;
 import protection.model.dataobjects.protection.Direction;
 import protection.model.dataobjects.protection.*;
 
-
+@Data
 public class PTOC extends LN {
-
-
 
     private WYE A = new WYE();
     private ACT Op = new ACT();
@@ -25,9 +24,9 @@ public class PTOC extends LN {
     @Override
     public void process() {
 
-        boolean phsA = A.getPhsA().getcVal().getMag().getF().getValue() > StrVal.getSetMag().getF().getValue() ;
-        boolean phsB = A.getPhsB().getcVal().getMag().getF().getValue() > StrVal.getSetMag().getF().getValue() ;
-        boolean phsC = A.getPhsC().getcVal().getMag().getF().getValue() > StrVal.getSetMag().getF().getValue();
+        boolean phsA = A.getPhsA().getCVal().getMag().getF().getValue() > StrVal.getSetMag().getF().getValue() ;
+        boolean phsB = A.getPhsB().getCVal().getMag().getF().getValue() > StrVal.getSetMag().getF().getValue() ;
+        boolean phsC = A.getPhsC().getCVal().getMag().getF().getValue() > StrVal.getSetMag().getF().getValue();
 
 
         boolean general = phsA || phsB || phsC;
@@ -62,83 +61,4 @@ public class PTOC extends LN {
         Op.getPhsC().setValue(phsC);
     }
 
-    public ENG getDirMod() {
-        return DirMod;
-    }
-
-    public void setDirMod(ENG dirMod) {
-        DirMod = dirMod;
-    }
-
-    public ACD getDir() {
-        return Dir;
-    }
-
-    public void setDir(ACD dir) {
-        Dir = dir;
-    }
-
-    public WYE getA() {
-        return A;
-    }
-
-    public void setA(WYE a) {
-        A = a;
-    }
-
-    public ACT getOp() {
-        return Op;
-    }
-
-    public void setOp(ACT op) {
-        Op = op;
-    }
-
-    public ACD getStr() {
-        return Str;
-    }
-
-    public void setStr(ACD str) {
-        Str = str;
-    }
-
-    public ASG getStrVal() {
-        return StrVal;
-    }
-
-    public void setStrVal(ASG strVal) {
-        StrVal = strVal;
-    }
-
-    public ING getOpDITmms() {
-        return OpDITmms;
-    }
-
-    public void setOpDITmms(ING opDITmms) {
-        OpDITmms = opDITmms;
-    }
-
-    public double getCntA() {
-        return CntA;
-    }
-
-    public void setCntA(double cntA) {
-        CntA = cntA;
-    }
-
-    public double getCntB() {
-        return CntB;
-    }
-
-    public void setCntB(double cntB) {
-        CntB = cntB;
-    }
-
-    public double getCntC() {
-        return CntC;
-    }
-
-    public void setCntC(double cntC) {
-        CntC = cntC;
-    }
 }

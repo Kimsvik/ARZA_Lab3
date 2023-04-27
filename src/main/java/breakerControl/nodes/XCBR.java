@@ -2,11 +2,16 @@ package breakerControl.nodes;
 
 import breakerControl.nodes.breaker.DPC;
 import breakerControl.nodes.breaker.SPC;
+import lombok.Getter;
+import lombok.Setter;
 import protection.model.common.LN;
 
 public class XCBR extends LN {
+    @Getter @Setter
     private DPC Pos = new DPC();
+    @Getter @Setter
     private SPC BlkOpn = new SPC();
+    @Getter @Setter
     private SPC BlkCls = new SPC();
 
     @Override
@@ -19,27 +24,4 @@ public class XCBR extends LN {
         }
     }
 
-    public DPC getPos() {
-        return Pos;
-    }
-
-    public void setPos(DPC pos) {
-        Pos = pos;
-    }
-
-    public SPC getBlkOpn() {
-        return BlkOpn;
-    }
-
-    public void setBlkOpn(SPC blkOpn) {
-        BlkOpn = blkOpn;
-    }
-
-    public SPC getBlkCls() {
-        return BlkCls;
-    }
-
-    public void setBlkCls(SPC blkCls) {
-        BlkCls = blkCls;
-    }
 }
