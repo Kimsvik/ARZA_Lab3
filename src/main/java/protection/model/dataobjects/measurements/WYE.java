@@ -2,6 +2,7 @@
 
     import lombok.Data;
 
+    /** WYE - звезда */
     @Data
     public class WYE {
 

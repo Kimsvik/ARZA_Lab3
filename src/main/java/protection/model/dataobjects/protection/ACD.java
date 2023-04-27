@@ -3,6 +3,8 @@ package protection.model.dataobjects.protection;
 import lombok.Data;
 import protection.model.common.Attribute;
 
+/** ACD (Directional Protection activation information)
+ * Сведения об активации направленной защиты */
 @Data
 public class ACD extends ACT {
 

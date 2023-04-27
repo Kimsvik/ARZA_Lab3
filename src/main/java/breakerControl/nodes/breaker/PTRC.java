@@ -11,10 +11,8 @@ public class PTRC extends LN {
 
     @Getter @Setter
     private ACT Tr = new ACT();
-
     @Getter @Setter
     private ArrayList<ACT> Op = new ArrayList<ACT>();
-
 
     @Override
     public void process() {

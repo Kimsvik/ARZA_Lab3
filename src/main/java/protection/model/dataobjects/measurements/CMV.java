@@ -3,7 +3,8 @@ package protection.model.dataobjects.measurements;
 import lombok.Getter;
 import lombok.Setter;
 
-// Комплексно измерямые значения
+/** CMV (Complex Measured Value)
+ * Комплексные измеряемые значения */
 public class CMV {
 
     @Getter @Setter

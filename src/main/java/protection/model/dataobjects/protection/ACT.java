@@ -3,6 +3,8 @@ package protection.model.dataobjects.protection;
 import lombok.Data;
 import protection.model.common.Attribute;
 
+/** ACT (Protection activation information)
+ * Сведения об активации защиты */
 @Data
 public class ACT {
 

@@ -24,7 +24,7 @@ public class Main2 {
 
         /** LSVC */
         LSVC lsvc = new LSVC();
-        lsvc.readComtrade("C:\\Users\\Сергей\\Desktop\\МЭИ\\М2 семестр\\Алгоритмы РЗА\\ЛР2\\Лабораторная работа №2\\Опыты\\KZ3");
+        lsvc.readComtrade("C:\\Users\\Сергей\\Desktop\\МЭИ\\М2 семестр\\Алгоритмы РЗА\\ЛР2\\Лабораторная работа №2\\Опыты\\KZ4");
 
         /** MMXU - используется для расчета тока, напряжения, мощности в трехфазной системе
          * (МЭК 61850-7-4) */
@@ -121,32 +121,27 @@ public class Main2 {
         xcbr.setPos(cswi.getPos());
 
         /** Ускорение защиты
-         *  1 - ON
-         *  0 - OFF */
-        int dir1 = 0;
-        int dir2 = 1;
-        int dir3 = 1;
-        int notdir1 = 1;
-        int notdir2 = 1;
+         *  true    ON
+         *  false   OFF */
+        boolean dir1 = false;
+        boolean dir2 = false;
+        boolean dir3 = false;
+        boolean notdir1 = false;
+        boolean notdir2 = false;
 
-        if (dir1 == 0) {
-            ptocdir1.getStrVal().getSetMag().getF().setValue(1000F);
+        if (dir1) {
+            ptocdir1.getOpDITmms().setSetVal(0);
         }
-        if (dir2 == 0) {
-            ptocdir2.getStrVal().getSetMag().getF().setValue(1000F);
-        }
-        if (dir3 == 0) {
-            ptocdir3.getStrVal().getSetMag().getF().setValue(1000F);
-        }
-        if (notdir1 == 0) {
-            ptocnotdir1.getStrVal().getSetMag().getF().setValue(1000F);
-        }
-        if (notdir2 == 0) {
-            ptocnotdir2.getStrVal().getSetMag().getF().setValue(1000F);
-        }
-
-        if (dir1 == 0 || dir2 == 0 || notdir1 == 0 || notdir2 == 0) {
+        if (dir2) {
             ptocdir2.getOpDITmms().setSetVal(0);
+        }
+        if (dir3) {
+            ptocdir3.getOpDITmms().setSetVal(0);
+        }
+        if (notdir1) {
+            ptocnotdir1.getOpDITmms().setSetVal(0);
+        }
+        if (notdir2) {
             ptocnotdir2.getOpDITmms().setSetVal(0);
         }
 
