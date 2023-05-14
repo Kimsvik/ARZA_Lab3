@@ -16,35 +16,21 @@ public class Main2 {
 
 
     public static void main(String[] args) {
-        boolean regime = true;
 
         /** LCOM - считывает comtrade-файл */
         LCOM lcom = new LCOM();
         lcom.setFilePath("C:\\Users\\Сергей\\Desktop\\МЭИ\\М2 семестр\\Алгоритмы РЗА\\ЛР2\\Лабораторная работа №2\\Опыты\\", "KZ3");
 
-        /** LSVC */
-        LSVC lsvc = new LSVC();
-        lsvc.readComtrade("C:\\Users\\Сергей\\Desktop\\МЭИ\\М2 семестр\\Алгоритмы РЗА\\ЛР2\\Лабораторная работа №2\\Опыты\\KZ4");
-
         /** MMXU - используется для расчета тока, напряжения, мощности в трехфазной системе
          * (МЭК 61850-7-4) */
         MMXU mmxu = new MMXU();
 
-        if (regime) {
-            mmxu.setInstUa(lsvc.getSignals().get(0));
-            mmxu.setInstUb(lsvc.getSignals().get(1));
-            mmxu.setInstUc(lsvc.getSignals().get(2));
-            mmxu.setInstIa(lsvc.getSignals().get(3));
-            mmxu.setInstIb(lsvc.getSignals().get(4));
-            mmxu.setInstIc(lsvc.getSignals().get(5));
-        } else {
-            mmxu.setInstUa(lcom.OUT.get(0));
-            mmxu.setInstUb(lcom.OUT.get(1));
-            mmxu.setInstUc(lcom.OUT.get(2));
-            mmxu.setInstIa(lcom.OUT.get(3));
-            mmxu.setInstIb(lcom.OUT.get(4));
-            mmxu.setInstIc(lcom.OUT.get(5));
-        }
+        mmxu.setInstUa(lcom.OUT.get(0));
+        mmxu.setInstUb(lcom.OUT.get(1));
+        mmxu.setInstUc(lcom.OUT.get(2));
+        mmxu.setInstIa(lcom.OUT.get(3));
+        mmxu.setInstIb(lcom.OUT.get(4));
+        mmxu.setInstIc(lcom.OUT.get(5));
 
         /** MSQI - используется для определения последовательностей
          * (МЭК 61850-7-4) */
@@ -157,27 +143,17 @@ public class Main2 {
                 new NHMISignal("U0", msqi.getSeqV().getC2().getCVal().getMag().getF())
         );
 
-        if (regime) {
-            nhmi.addSignals(
-                    new NHMISignal("Ia", lsvc.getSignals().get(3).getInstMag().getF())
-            );
-            nhmi.addSignals(
-                    new NHMISignal("Ib", lsvc.getSignals().get(4).getInstMag().getF())
-            );
-            nhmi.addSignals(
-                    new NHMISignal("Ic", lsvc.getSignals().get(5).getInstMag().getF())
-            );
-        } else {
-            nhmi.addSignals(
-                    new NHMISignal("Ia", lcom.OUT.get(3).getInstMag().getF())
-            );
-            nhmi.addSignals(
+
+
+        nhmi.addSignals(
+                new NHMISignal("Ia", lcom.OUT.get(3).getInstMag().getF())
+        );
+        nhmi.addSignals(
                     new NHMISignal("Ib", lcom.OUT.get(4).getInstMag().getF())
-            );
-            nhmi.addSignals(
-                    new NHMISignal("Ic", lcom.OUT.get(5).getInstMag().getF())
-            );
-        }
+        );
+        nhmi.addSignals(
+                new NHMISignal("Ic", lcom.OUT.get(5).getInstMag().getF())
+        );
 
         nhmi.addSignals(
             new NHMISignal("I1", msqi.getSeqA().getC1().getCVal().getMag().getF())
@@ -212,39 +188,21 @@ public class Main2 {
                 new NHMISignal("Выключатель", xcbr.getPos().getStVal())
         );
 
-        if (regime) {
-            while(lsvc.hasNext()) {
-                lsvc.process();
-                ptrc.process();
-                nhmi.process();
-                mmxu.process();
-                ptocnotdir1.process();
-                ptocnotdir2.process();
-                ptocdir1.process();
-                ptocdir2.process();
-                ptocdir3.process();
-                cswi.process();
-                xcbr.process();
-                msqi.process();
-                rdir.process();
+        while(lcom.hasNext()) {
+            lcom.process();
+            ptrc.process();
+            nhmi.process();
+            mmxu.process();
+            ptocnotdir1.process();
+            ptocnotdir2.process();
+            ptocdir1.process();
+            ptocdir2.process();
+            ptocdir3.process();
+            cswi.process();
+            xcbr.process();
+            msqi.process();
+            rdir.process();
             }
-        } else {
-            while(lcom.hasNext()) {
-                lcom.process();
-                ptrc.process();
-                nhmi.process();
-                mmxu.process();
-                ptocnotdir1.process();
-                ptocnotdir2.process();
-                ptocdir1.process();
-                ptocdir2.process();
-                ptocdir3.process();
-                cswi.process();
-                xcbr.process();
-                msqi.process();
-                rdir.process();
-            }
-        }
 
                 //System.out.println(MSQI.getSeqA().getC1().getCVal().getMag());
 

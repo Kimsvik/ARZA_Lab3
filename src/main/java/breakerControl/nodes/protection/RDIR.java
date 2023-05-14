@@ -15,7 +15,7 @@ public class RDIR extends LN {
     private WYE N = new WYE();
     @Override
     public void process() {
-        if(N.getPhsA().getCVal().getAng().getF().getValue() < -20 && N.getPhsA().getCVal().getAng().getF().getValue() > -1800){
+        if(N.getPhsA().getCVal().getAng().getF().getValue() < -20 && N.getPhsA().getCVal().getAng().getF().getValue() > -180){
             Dir.getDirPhsA().setValue(Direction.BACKWARD);
         }
         if(N.getPhsB().getCVal().getAng().getF().getValue() < -20 && N.getPhsB().getCVal().getAng().getF().getValue() > -180){
