@@ -5,17 +5,18 @@ import protection.model.common.LN;
 import protection.model.dataobjects.measurements.Vector;
 import protection.model.dataobjects.measurements.WYE;
 
+/** MSQI
+ *  Последовательность и небаланс */
+
 @Data
 public class MSQI extends LN {
 
 
-    private SEQ SeqA = new SEQ();
-    private SEQ SeqV = new SEQ();
+    private SEQ SeqA = new SEQ(); // Ток прямой, обратной и нулевой последовательностей
+    private SEQ SeqV = new SEQ(); // Напряжение прямой, обратной и нулевой последовательностей
 
-    private WYE ImbA = new WYE();
-    private WYE ImbV = new WYE();
-
-
+    private WYE ImbA = new WYE(); // Ток небаланса
+    private WYE ImbV = new WYE(); // Напряжение небаланса
 
     private Vector turnBplus120 = new Vector();
     private Vector turnBminus120 = new Vector();

@@ -1,5 +1,6 @@
 package breakerControl.nodes.protection;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import protection.model.common.LN;
@@ -7,11 +8,13 @@ import protection.model.dataobjects.measurements.WYE;
 import protection.model.dataobjects.protection.ACD;
 import protection.model.dataobjects.protection.Direction;
 
+/** RDIR
+ *  Элемент направленной защиты */
+
+@Data
 public class RDIR extends LN {
 
-    @Getter @Setter
-    private ACD Dir = new ACD();
-    @Getter @Setter
+    private ACD Dir = new ACD(); // Направление
     private WYE N = new WYE();
     @Override
     public void process() {

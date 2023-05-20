@@ -7,12 +7,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Lab2" />
+        <module name="ARZA_lab2" />
         <module name="Kimsvik" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Lab2" target="18" />
+      <module name="Lab3" target="18" />
     </bytecodeTargetLevel>
   </component>
 </project>
