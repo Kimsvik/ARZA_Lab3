@@ -8,7 +8,7 @@ import lombok.Setter;
 public class Vector {
     @Getter @Setter
     private AnalogValue mag = new AnalogValue();
-    @Getter
+    @Getter @Setter
     private AnalogValue ang = new AnalogValue();
     @Getter @Setter
     private AnalogValue rad = new AnalogValue();
@@ -33,13 +33,14 @@ public class Vector {
         mag.getF().setValue((float) Math.sqrt(Math.pow(poX,2) + Math.pow(poY,2)));
         ang.getF().setValue((float) Math.toDegrees(rad.getF().getValue()));
     }
-    public void Napravlenie(Vector current, Vector voltage){
+
+    public void napravlenie(Vector current, Vector voltage){
 
         ang.getF().setValue(voltage.getAng().getF().getValue() - current.getAng().getF().getValue());
         this.setAng(ang);
         mag.getF().setValue(voltage.getMag().getF().getValue()/current.getMag().getF().getValue());
     }
-
+/**
     public void setAng(AnalogValue ang) {
         if (ang.getF().getValue() > 180) {
             ang.getF().setValue(ang.getF().getValue() - 360);
@@ -48,5 +49,5 @@ public class Vector {
         }
         this.ang = ang;
     }
-
+*/
 }

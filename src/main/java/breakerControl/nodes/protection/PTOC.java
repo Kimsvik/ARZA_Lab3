@@ -33,19 +33,19 @@ public class PTOC extends LN {
         if (phsA) {
             CntA = 1;
         }
-        else{
-            CntA =0;
+        else {
+            CntA = 0;
         }
         if (phsB) {
             CntB += 1;
         }
-        else{
+        else {
             CntB =0;
         }
         if (phsC) {
             CntC += 1;
         }
-        else{
+        else {
             CntC =0;
         }
 

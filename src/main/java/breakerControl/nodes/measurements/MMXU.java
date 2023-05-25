@@ -7,7 +7,7 @@ import protection.model.dataobjects.measurements.Vector;
 import breakerControl.objects.measurements.filter.Filter;
 import breakerControl.objects.measurements.filter.Furier;
 import protection.model.dataobjects.measurements.WYE;
-import breakerControl.objects.samples.MV;
+import protection.model.dataobjects.measurements.MV;
 
 /** MMXU
  *  Измерения */
@@ -41,9 +41,21 @@ public class MMXU extends LN {
     private Filter iaF = new Furier();
     private Filter ibF = new Furier();
     private Filter icF = new Furier();
+    private Vector zA = new Vector();
+    private Vector zB = new Vector();
+    private Vector zC = new Vector();
+    private Vector Iab = new Vector();
+    private Vector Ibc = new Vector();
+    private Vector Ica = new Vector();
+    private Vector Uab = new Vector();
+    private Vector Ubc = new Vector();
+    private Vector Uca = new Vector();
     private Vector Zab = new Vector();
     private Vector Zbc = new Vector();
     private Vector Zca = new Vector();
+    private int f = 50;
+    private int counter;
+    private WYE prev = new WYE();
 
 
     @Override
@@ -56,18 +68,49 @@ public class MMXU extends LN {
         ibF.process(instIb, A.getPhsB().getCVal());
         icF.process(instIc, A.getPhsC().getCVal());
 
-
-
-
-        Na.Napravlenie(A.getPhsA().getCVal(), PhV.getPhsA().getCVal());
-        Nb.Napravlenie(A.getPhsB().getCVal(), PhV.getPhsB().getCVal());
-        Nc.Napravlenie(A.getPhsC().getCVal(), PhV.getPhsC().getCVal());
+        Na.napravlenie(A.getPhsA().getCVal(), PhV.getPhsA().getCVal());
+        Nb.napravlenie(A.getPhsB().getCVal(), PhV.getPhsB().getCVal());
+        Nc.napravlenie(A.getPhsC().getCVal(), PhV.getPhsC().getCVal());
 
         N.getPhsA().setCVal(Na);
         N.getPhsB().setCVal(Nb);
         N.getPhsC().setCVal(Nc);
 
+        Uab.tovector((PhV.getPhsA().getCVal().getX().getF().getValue() - PhV.getPhsB().getCVal().getX().getF().getValue()),
+                (PhV.getPhsA().getCVal().getY().getF().getValue() - PhV.getPhsB().getCVal().getY().getF().getValue()));
+        Ubc.tovector((PhV.getPhsB().getCVal().getX().getF().getValue() - PhV.getPhsC().getCVal().getX().getF().getValue()),
+                (PhV.getPhsB().getCVal().getY().getF().getValue() - PhV.getPhsC().getCVal().getY().getF().getValue()));
+        Uca.tovector((PhV.getPhsC().getCVal().getX().getF().getValue() - PhV.getPhsA().getCVal().getX().getF().getValue()),
+                (PhV.getPhsC().getCVal().getY().getF().getValue() - PhV.getPhsA().getCVal().getY().getF().getValue()));
 
+        Iab.tovector((A.getPhsA().getCVal().getX().getF().getValue() - A.getPhsB().getCVal().getX().getF().getValue()),
+                (A.getPhsA().getCVal().getY().getF().getValue() - A.getPhsB().getCVal().getY().getF().getValue()));
+        Ibc.tovector((A.getPhsB().getCVal().getX().getF().getValue() - A.getPhsC().getCVal().getX().getF().getValue()),
+                (A.getPhsB().getCVal().getY().getF().getValue() - A.getPhsC().getCVal().getY().getF().getValue()));
+        Ica.tovector((A.getPhsC().getCVal().getX().getF().getValue() - A.getPhsA().getCVal().getX().getF().getValue()),
+                (A.getPhsC().getCVal().getY().getF().getValue() - A.getPhsA().getCVal().getY().getF().getValue()));
+
+
+        Zab.napravlenie(Iab, Uab);
+        Zbc.napravlenie(Ibc, Ubc);
+        Zca.napravlenie(Ica, Uca);
+
+        Zab.naXandY(Zab.getMag().getF().getValue(), Zab.getAng().getF().getValue());
+        Zbc.naXandY(Zbc.getMag().getF().getValue(), Zbc.getAng().getF().getValue());
+        Zca.naXandY(Zca.getMag().getF().getValue(), Zca.getAng().getF().getValue());
+
+        Zf.getPhsAB().setCVal(Zab);
+        Zf.getPhsBC().setCVal(Zbc);
+        Zf.getPhsCA().setCVal(Zca);
+
+
+        zA.napravlenie(A.getPhsA().getCVal(), PhV.getPhsA().getCVal());
+        zB.napravlenie(A.getPhsB().getCVal(), PhV.getPhsB().getCVal());
+        zC.napravlenie(A.getPhsC().getCVal(), PhV.getPhsC().getCVal());
+
+        Z.getPhsA().setCVal(zA);
+        Z.getPhsB().setCVal(zB);
+        Z.getPhsC().setCVal(zC);
     }
 
 }

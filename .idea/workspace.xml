@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a6c36255-1cbf-435e-8700-6dd384df7092" name="Default Changelist" comment="Commit 4">
+      <change afterPath="$PROJECT_DIR$/src/main/java/protection/model/dataobjects/measurements/HWYE.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/breakerControl/nodes/gui/NHMIP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/breakerControl/nodes/gui/NHMIP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/breakerControl/nodes/gui/other/NHMIPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/breakerControl/nodes/gui/other/NHMIPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/breakerControl/nodes/gui/other/NHMISignal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/breakerControl/nodes/gui/other/NHMISignal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/breakerControl/nodes/input/LCOM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/breakerControl/nodes/input/LCOM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/breakerControl/nodes/input/LSVC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/breakerControl/nodes/input/LSVC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/breakerControl/nodes/measurements/MMXU.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/breakerControl/nodes/measurements/MMXU.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/breakerControl/nodes/protection/PTOC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/breakerControl/nodes/protection/PTOC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/breakerControl/objects/measurements/filter/Filter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/breakerControl/objects/measurements/filter/Filter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/breakerControl/objects/measurements/filter/Furier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/breakerControl/objects/measurements/filter/Furier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/breakerControl/objects/samples/MV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/protection/model/dataobjects/measurements/MV.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/protection/model/dataobjects/measurements/Vector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/protection/model/dataobjects/measurements/Vector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/breakerControl/nodes/input/LCOM.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/breakerControl/nodes/input/LCOM.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="JupyterTrust" id="bc434efc-77aa-4d62-a582-8fd723904033" />
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Users\ALEXCOLD\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\202.7660.26\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="downloadAnnotationsAutomatically" value="true" />
+        <option name="downloadDocsAutomatically" value="true" />
+        <option name="downloadSourcesAutomatically" value="true" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="25mC86IXnr4iFSivt03lm1s5xIw" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/Сергей/IdeaProjects/ARZA/ЛР3КИСЕЛЕВ"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="breakerControl.objects.measurements.filter" />
+      <recent name="" />
+      <recent name="breakerControl.objects.samples" />
+      <recent name="breakerControl.nodes.protection" />
+      <recent name="breakerControl.nodes.custom" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Lab3">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Lab1" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="18" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="ARZA_lab2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Lab2" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="18" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="Main2" />
+      <module name="ARZA_lab2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Lab3" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="18" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="Main3" />
+      <module name="ARZA_lab2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Lab1" />
+      <item itemvalue="Application.Lab2" />
+      <item itemvalue="Application.Lab3" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a6c36255-1cbf-435e-8700-6dd384df7092" name="Default Changelist" comment="" />
+      <created>1646122713379</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1646122713379</updated>
+      <workItem from="1646122714990" duration="8606000" />
+    </task>
+    <task id="LOCAL-00001" summary="Commit 1">
+      <created>1682544583828</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1682544583828</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Commit 2">
+      <created>1682596340997</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1682596340997</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Commit 3">
+      <created>1682598575546</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1682598575546</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Commit 3">
+      <created>1682598638798</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1682598638798</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Commit 4">
+      <created>1684085125610</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1684085125610</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Commit 4">
+      <created>1684624736066</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1684624736066</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Commit 1" />
+    <MESSAGE value="Commit 2" />
+    <MESSAGE value="Commit 3" />
+    <MESSAGE value="Commit 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit 4" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="A" language="JAVA" />
+        <watch expression="C.y" />
+        <watch expression="rdir.Dir.dirPhsB" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>

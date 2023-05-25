@@ -1,4 +1,4 @@
-package breakerControl.objects.samples;
+package protection.model.dataobjects.measurements;
 
 import lombok.Getter;
 import lombok.Setter;

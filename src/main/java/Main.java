@@ -29,14 +29,14 @@ public class Main {
         MMXU mmxu = new MMXU();
 
         mmxu.setInstIa(lcom.OUT.get(0));
-        mmxu.setInstIa(lcom.OUT.get(1));
-        mmxu.setInstIa(lcom.OUT.get(2));
+        mmxu.setInstIb(lcom.OUT.get(1));
+        mmxu.setInstIc(lcom.OUT.get(2));
 
         /** PTOC - используется для моделирования направленной максимальной токовой защиты с выдержкой времени
          * (МЭК 61850-7-4) */
         PTOC ptoc = new PTOC();
         ptoc.setA(mmxu.getA());
-        ptoc.getStrVal().getSetMag().getF().setValue(30000F);
+        ptoc.getStrVal().getSetMag().getF().setValue(3000F);
         ptoc.getOpDITmms().setSetVal(1000);
 
         PTOC ptoc2 = new PTOC();

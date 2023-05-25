@@ -1,6 +1,6 @@
 package breakerControl.nodes.input;
 
-import breakerControl.objects.samples.MV;
+import protection.model.dataobjects.measurements.MV;
 import lombok.SneakyThrows;
 import org.apache.commons.io.FileUtils;
 import protection.model.common.LN;

@@ -1,7 +1,7 @@
 package breakerControl.nodes.input;
 
 import protection.model.common.LN;
-import breakerControl.objects.samples.MV;
+import protection.model.dataobjects.measurements.MV;
 
 import java.io.BufferedReader;
 import java.io.File;
