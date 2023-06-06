@@ -36,20 +36,20 @@ public class MSQI extends LN {
     }
     private void setting(WYE wye, SEQ seq){
 
-        turnBplus120.naXandY(wye.getPhsB().getCVal().getMag().getF().getValue(),
+        turnBplus120.artog(wye.getPhsB().getCVal().getMag().getF().getValue(),
                 wye.getPhsB().getCVal().getAng().getF().getValue() + 120);
-        turnBminus120.naXandY(wye.getPhsB().getCVal().getMag().getF().getValue(),
+        turnBminus120.artog(wye.getPhsB().getCVal().getMag().getF().getValue(),
                 wye.getPhsB().getCVal().getAng().getF().getValue() - 120);
-        turnCplus120.naXandY(wye.getPhsC().getCVal().getMag().getF().getValue(),
+        turnCplus120.artog(wye.getPhsC().getCVal().getMag().getF().getValue(),
                 wye.getPhsC().getCVal().getAng().getF().getValue() + 120);
-        turnCminus120.naXandY(wye.getPhsC().getCVal().getMag().getF().getValue(),
+        turnCminus120.artog(wye.getPhsC().getCVal().getMag().getF().getValue(),
                 wye.getPhsC().getCVal().getAng().getF().getValue() - 120);
 
-        Aneizm.naXandY(wye.getPhsA().getCVal().getMag().getF().getValue(),
+        Aneizm.artog(wye.getPhsA().getCVal().getMag().getF().getValue(),
                 wye.getPhsA().getCVal().getAng().getF().getValue());
-        Bneizm.naXandY(wye.getPhsB().getCVal().getMag().getF().getValue(),
+        Bneizm.artog(wye.getPhsB().getCVal().getMag().getF().getValue(),
                 wye.getPhsB().getCVal().getAng().getF().getValue());
-        Cneizm.naXandY(wye.getPhsC().getCVal().getMag().getF().getValue(),
+        Cneizm.artog(wye.getPhsC().getCVal().getMag().getF().getValue(),
                 wye.getPhsC().getCVal().getAng().getF().getValue());
 
         seq.getC1().getCVal().tovector(((Aneizm.getX().getF().getValue() + turnBplus120.getX().getF().getValue() + turnCminus120.getX().getF().getValue())/3),

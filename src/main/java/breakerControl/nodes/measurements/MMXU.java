@@ -34,13 +34,13 @@ public class MMXU extends LN {
     private Vector Nb = new Vector();
     private Vector Nc = new Vector();
 
-    private Filter UaF = new Furier();
-    private Filter UbF = new Furier();
-    private Filter UcF = new Furier();
+    private Furier UaF = new Furier();
+    private Furier UbF = new Furier();
+    private Furier UcF = new Furier();
 
-    private Filter iaF = new Furier();
-    private Filter ibF = new Furier();
-    private Filter icF = new Furier();
+    private Furier iaF = new Furier();
+    private Furier ibF = new Furier();
+    private Furier icF = new Furier();
     private Vector zA = new Vector();
     private Vector zB = new Vector();
     private Vector zC = new Vector();
@@ -50,6 +50,12 @@ public class MMXU extends LN {
     private Vector Uab = new Vector();
     private Vector Ubc = new Vector();
     private Vector Uca = new Vector();
+    private float cosFiAB;
+    private float cosFiBC;
+    private float cosFiCA;
+    private float sinFiAB;
+    private float sinFiBC;
+    private float sinFiCA;
     private Vector Zab = new Vector();
     private Vector Zbc = new Vector();
     private Vector Zca = new Vector();
@@ -68,9 +74,9 @@ public class MMXU extends LN {
         ibF.process(instIb, A.getPhsB().getCVal());
         icF.process(instIc, A.getPhsC().getCVal());
 
-        Na.napravlenie(A.getPhsA().getCVal(), PhV.getPhsA().getCVal());
-        Nb.napravlenie(A.getPhsB().getCVal(), PhV.getPhsB().getCVal());
-        Nc.napravlenie(A.getPhsC().getCVal(), PhV.getPhsC().getCVal());
+        Na.Zvector(A.getPhsA().getCVal(), PhV.getPhsA().getCVal());
+        Nb.Zvector(A.getPhsB().getCVal(), PhV.getPhsB().getCVal());
+        Nc.Zvector(A.getPhsC().getCVal(), PhV.getPhsC().getCVal());
 
         N.getPhsA().setCVal(Na);
         N.getPhsB().setCVal(Nb);
@@ -91,22 +97,33 @@ public class MMXU extends LN {
                 (A.getPhsC().getCVal().getY().getF().getValue() - A.getPhsA().getCVal().getY().getF().getValue()));
 
 
-        Zab.napravlenie(Iab, Uab);
-        Zbc.napravlenie(Ibc, Ubc);
-        Zca.napravlenie(Ica, Uca);
+        Zab.Zvector(Iab, Uab);
+        Zbc.Zvector(Ibc, Ubc);
+        Zca.Zvector(Ica, Uca);
 
-        Zab.naXandY(Zab.getMag().getF().getValue(), Zab.getAng().getF().getValue());
-        Zbc.naXandY(Zbc.getMag().getF().getValue(), Zbc.getAng().getF().getValue());
-        Zca.naXandY(Zca.getMag().getF().getValue(), Zca.getAng().getF().getValue());
+        Zab.artog(Zab.getMag().getF().getValue(), Zab.getAng().getF().getValue());
+        Zbc.artog(Zbc.getMag().getF().getValue(), Zbc.getAng().getF().getValue());
+        Zca.artog(Zca.getMag().getF().getValue(), Zca.getAng().getF().getValue());
 
         Zf.getPhsAB().setCVal(Zab);
         Zf.getPhsBC().setCVal(Zbc);
         Zf.getPhsCA().setCVal(Zca);
 
+        float angAB = (float) Math.toRadians(Uab.getAng().getF().getValue() - Iab.getAng().getF().getValue());
+        float angBC = (float) Math.toRadians(Ubc.getAng().getF().getValue() - Ibc.getAng().getF().getValue());
+        float angCA = (float) Math.toRadians(Uca.getAng().getF().getValue() - Ica.getAng().getF().getValue());
 
-        zA.napravlenie(A.getPhsA().getCVal(), PhV.getPhsA().getCVal());
-        zB.napravlenie(A.getPhsB().getCVal(), PhV.getPhsB().getCVal());
-        zC.napravlenie(A.getPhsC().getCVal(), PhV.getPhsC().getCVal());
+        cosFiAB= (float) Math.cos(angAB);
+        cosFiBC= (float) Math.cos(angBC);
+        cosFiCA= (float) Math.cos(angCA);
+
+        sinFiAB= (float) Math.sin(angAB);
+        sinFiBC= (float) Math.sin(angBC);
+        sinFiCA= (float) Math.sin(angCA);
+
+        zA.Zvector(A.getPhsA().getCVal(), PhV.getPhsA().getCVal());
+        zB.Zvector(A.getPhsB().getCVal(), PhV.getPhsB().getCVal());
+        zC.Zvector(A.getPhsC().getCVal(), PhV.getPhsC().getCVal());
 
         Z.getPhsA().setCVal(zA);
         Z.getPhsB().setCVal(zB);

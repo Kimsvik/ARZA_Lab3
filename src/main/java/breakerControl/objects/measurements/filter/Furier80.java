@@ -8,7 +8,7 @@ import java.lang.Math;
 import static java.lang.Math.round;
 
 @Data
-public class Furier extends Filter {
+public class Furier80 extends Filter {
 
     private int size = 80;
     private int count = 0;

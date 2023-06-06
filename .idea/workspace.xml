@@ -4,23 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6c36255-1cbf-435e-8700-6dd384df7092" name="Default Changelist" comment="Commit 4">
-      <change afterPath="$PROJECT_DIR$/src/main/java/protection/model/dataobjects/measurements/HWYE.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/breakerControl/nodes/gui/NHMIP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/breakerControl/nodes/gui/NHMIP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/breakerControl/nodes/gui/other/NHMIPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/breakerControl/nodes/gui/other/NHMIPoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/breakerControl/nodes/gui/other/NHMISignal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/breakerControl/nodes/gui/other/NHMISignal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/breakerControl/nodes/input/LCOM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/breakerControl/nodes/input/LCOM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/breakerControl/nodes/input/LSVC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/breakerControl/nodes/input/LSVC.java" afterDir="false" />
+    <list default="true" id="a6c36255-1cbf-435e-8700-6dd384df7092" name="Default Changelist" comment="Lab3 commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/breakerControl/nodes/measurements/MHAI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/breakerControl/nodes/measurements/MHAI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/breakerControl/nodes/measurements/MMXU.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/breakerControl/nodes/measurements/MMXU.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/breakerControl/nodes/protection/PTOC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/breakerControl/nodes/protection/PTOC.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/breakerControl/objects/measurements/filter/Filter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/breakerControl/objects/measurements/filter/Filter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/breakerControl/objects/measurements/filter/Furier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/breakerControl/objects/measurements/filter/Furier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/breakerControl/objects/samples/MV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/protection/model/dataobjects/measurements/MV.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/breakerControl/objects/measurements/filter/Furier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/breakerControl/objects/measurements/filter/Furier80.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/breakerControl/objects/measurements/filter/MSQI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/breakerControl/objects/measurements/filter/MSQI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/protection/model/dataobjects/measurements/Vector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/protection/model/dataobjects/measurements/Vector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/breakerControl/nodes/input/LCOM.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/breakerControl/nodes/input/LCOM.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/protection/model/dataobjects/measurements/Vector.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/protection/model/dataobjects/measurements/Vector.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +65,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/Сергей/IdeaProjects/ARZA/ЛР3КИСЕЛЕВ"
+    "last_opened_file_path": "C:/Users/Сергей/IdeaProjects/ARZA/ЛР4КИСЕЛЕВ"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -82,13 +74,13 @@
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="breakerControl.objects.measurements.filter" />
-      <recent name="" />
-      <recent name="breakerControl.objects.samples" />
       <recent name="breakerControl.nodes.protection" />
-      <recent name="breakerControl.nodes.custom" />
+      <recent name="protection.model.dataobjects.measurements" />
+      <recent name="breakerControl.nodes.measurements" />
+      <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Lab3">
+  <component name="RunManager" selected="Application.Lab4">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -127,10 +119,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Lab4" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="18" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="Main4" />
+      <module name="ARZA_lab2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Lab1" />
       <item itemvalue="Application.Lab2" />
       <item itemvalue="Application.Lab3" />
+      <item itemvalue="Application.Lab4" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -185,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684624736066</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Lab3 commit">
+      <created>1685045758832</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1685045758832</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,9 +205,19 @@
     <MESSAGE value="Commit 2" />
     <MESSAGE value="Commit 3" />
     <MESSAGE value="Commit 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit 4" />
+    <MESSAGE value="Lab3 commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lab3 commit" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Main4.java</url>
+          <line>353</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="A" language="JAVA" />

@@ -2,7 +2,7 @@ package breakerControl.nodes.measurements;
 
 import protection.model.common.LN;
 import breakerControl.objects.measurements.filter.Filter;
-import breakerControl.objects.measurements.filter.Furier;
+import breakerControl.objects.measurements.filter.Furier20;
 import protection.model.dataobjects.measurements.HWYE;
 import protection.model.dataobjects.measurements.MV;
 import lombok.Getter;
@@ -27,9 +27,9 @@ public class MHAI extends LN {
     @Override
     public void process() {
         for (int i=0;i<=HA.getNumHar().getValue();i++){
-            iaF.add(new Furier());
-            ibF.add(new Furier());
-            icF.add(new Furier());
+            iaF.add(new Furier20(i));
+            ibF.add(new Furier20(i));
+            icF.add(new Furier20(i));
 
             iaF.get(i).process(instIa,HA.getPhsAHar().get(i));
             ibF.get(i).process(instIb,HA.getPhsBHar().get(i));
